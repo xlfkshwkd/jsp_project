@@ -4,7 +4,7 @@ public class ServiceManager {
 
     private static ServiceManager instance;
 
-    private ServiceManager(){}
+    private ServiceManager() {}
 
     public static ServiceManager getInstance() {
         if (instance == null) {
@@ -14,14 +14,27 @@ public class ServiceManager {
         return instance;
     }
 
-    public MemberDao memberDao(){
+    public MemberDao memberDao() {
         return new MemberDao();
     }
-    public JoinValidator JoinValidator(){
-        return new JoinValidator();
+
+    public JoinValidator joinValidator() {
+        JoinValidator validator = new JoinValidator();
+        validator.setMemberDao(memberDao());
+
+        return validator;
     }
 
-    public JoinService joinService(){
-        return new JoinService(JoinValidator(),memberDao());
+    public JoinService joinService() {
+        return new JoinService(joinValidator(), memberDao());
+    }
+
+    public LoginValidator loginValidator() {
+
+        return new LoginValidator(memberDao());
+    }
+
+    public LoginService loginService() {
+        return new LoginService(loginValidator(), memberDao());
     }
 }

@@ -5,7 +5,7 @@ import commons.Validator;
 
 public class JoinService {
     private Validator validator;
-    private MemberDao memberDao;
+    private MemberDao memberDao;//역할의 유연성  나중에 대체하려고
 
     public JoinService(Validator validator, MemberDao memberDao) {
         this.validator = validator;
@@ -20,11 +20,6 @@ public class JoinService {
             throw new BadRequestException("아이디를 입력하세요.");
         }
     }
-
-
-
-
-
 
 
 

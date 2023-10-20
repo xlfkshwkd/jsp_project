@@ -14,11 +14,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class JoinServiceTest {
     private JoinService joinService;
 
+
     @BeforeEach
     void init() {
       //  joinService = new JoinService();
         joinService = new JoinService(new JoinValidator(), new MemberDao());
     }
+
+
 
     private Member getMember() {
         String userPw = "12345678";

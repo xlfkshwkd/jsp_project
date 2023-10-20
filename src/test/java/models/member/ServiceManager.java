@@ -1,15 +1,16 @@
 package models.member;
 
-public class ServiceManger {
+public class ServiceManager {
 
-    private static ServiceManger Instance;
+    private static ServiceManager instance;
 
-    private ServiceManger(){}
+    private ServiceManager(){}
 
-    private static ServiceManger getInstance(){
-        if( instance == null){
-            instance = new ServiceManger();
+    public static ServiceManager getInstance() {
+        if (instance == null) {
+            instance = new ServiceManager();
         }
+
         return instance;
     }
 

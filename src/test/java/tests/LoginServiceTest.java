@@ -75,7 +75,7 @@ public class LoginServiceTest {
     void requiredFieldCheck(){
         assertAll(
                 () ->{
-                    //
+                    //111
                 }
         );
     }

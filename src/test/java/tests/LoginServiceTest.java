@@ -1,6 +1,7 @@
 package tests;
 
 
+import commons.BadRequestException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import models.member.JoinService;
@@ -13,11 +14,16 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.BDDMockito.*;
 
 @DisplayName("로그인 기능 단위 테스트")
 @ExtendWith(MockitoExtension.class)
+@MockitoSettings(strictness = Strictness.LENIENT)
 
 public class LoginServiceTest {
 
@@ -28,23 +34,15 @@ public class LoginServiceTest {
     private Member member;
 
     @BeforeEach
-    void init(){
-        loginService =new LoginService();
-        member =getMember();
+    void init() {
+        loginService = new LoginService();
+        member = getMember();
 
-        JoinService joinService = ServiceManager.getInstance().joinService();;
+        JoinService joinService = ServiceManager.getInstance().joinService();
+        ;
         joinService.join(member);
 
     }
-    @Test
-    @DisplayName("로그인 성공시 예외발생 안함")
-    void loginSuccess(){
-        assertDoesNotThrow(()->{
-            loginService.login(request);
-        });
-    }
-
-    //아아ㅏㅏ아ㅏㅏㅏㅏㅏ
 
     private Member getMember() {
         String userPw = "12345678";
@@ -57,5 +55,39 @@ public class LoginServiceTest {
                 .agree(true)
                 .build();
     }
+    private void createRequestData(String userId, String userPw){
+        given(request.getParameter("userId")).willReturn(userId);
+        given(request.getParameter("userPw")).willReturn(userPw);
+
+    }
+
+
+    @Test
+    @DisplayName("로그인 성공시 예외발생 안함")
+    void loginSuccess() {
+        createRequestData(member.getUserId(),member.getUserPw());
+        assertDoesNotThrow(() -> {
+            loginService.login(request);
+        });
+    }
+    @Test
+    @DisplayName("필수 항목 검증 아이디, 비밀번호 검증실패시 badrequst 발생")
+    void requiredFieldCheck(){
+        assertAll(
+                () ->{
+
+                }
+        );
+    }
+
+
+    private void requiredFieldEachCheck(HttpServletRequest request, String word) {
+        BadRequestException thrown = assertThrows(BadRequestException.class, () -> {
+            loginService.login(request);
+        });
+        assertTrue(thrown.getMessage().contains(word));
+
+    }
+
 
 }

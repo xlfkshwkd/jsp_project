@@ -94,8 +94,6 @@ public class JoinServiceTest {
                  requiredFieldEachCheck(member, "약관");
 
              }
-             
-             
 
      );
     }

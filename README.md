@@ -17,6 +17,7 @@
     - junit5
     - mockito
     - maven-sure-fire 
+    - pom에 추가 함
 
 - joinservie 회원 가입 설계
   - models/member/JoinService.java
@@ -25,4 +26,15 @@
     - 아이디 자리수(6자리 이상), 비밀번호 자리수(8자리 이상) 체크
     - 비밀번호, 비밀번호 확인 입력 데이터 일치여부 체크
     - 회원 정보를 저장
-    - 
+
+
+
+
+
+
+
+
+
+
+
+

@@ -50,4 +50,11 @@ public class JoinServiceTest {
             joinService.join(member);
         });
     }
+
+
+
+
+
+
+
 }

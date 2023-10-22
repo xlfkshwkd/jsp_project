@@ -9,7 +9,7 @@
     </title>
     <link rel="stylesheet" type="text/css" href="css/style3.css">
 </head>
-<body style = "background-image:url(images/black1xnaud.jpg)">
+<body style = "background-image:url(images/blackground.jpg)">
     <a href="black.html"><img class= i1 src="images/log.jpg" ></a>
     <h1>회원가입</h1>
     <form method="POST" action="#">

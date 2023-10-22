@@ -25,6 +25,7 @@ public class JoinValidator implements Validator<Member>, RequiredValidator, Leng
         requiredCheck(confirmUserPw, new BadRequestException("비밀번호를 확인하세요."));
         requiredCheck(member.getUserNm(), new BadRequestException("회원명을 입력하세요."));
         requiredCheck(member.getEmail(), new BadRequestException("이메일을 입력하세요."));
+        requiredCheck(member.getPhoneNb(), new BadRequestException("폰번호를 입력하세요."));
 
         requiredTrue(member.isAgree(), new BadRequestException("회원가입 약관에 동의하세요."));
         // 필수 항목 검증 E

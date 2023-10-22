@@ -11,11 +11,11 @@
 <body style = "background-image:url(images/black1xnaud.jpg)">
     <div class=d1>
         <div class=d2>
-            <div class=d21><a href=#>홈</a></div>
-            <div class=d22><a href=#>캐릭터</a></div>
-            <div class=d23><a href=#>공략/루트</a></div>
-            <div class=d23><a href="black4.html" target="_self">게임소개</a></div>
-            <div class=d24> ${userId}  로그인 완료</div>
+            <div class="d21"><a href=#>홈</a></div>
+            <div class="d22"><a href=#>캐릭터</a></div>
+            <div class="d23"><a href=#>공략/루트</a></div>
+            <div class="d23"><a href="black4.html" target="_self">게임소개</a></div>
+            <div class="d24"><%= userId %> 로그인 완료</div>
 
             </div>
           <a href="black.html"><img class= i1 src="images/log.jpg" ></a>

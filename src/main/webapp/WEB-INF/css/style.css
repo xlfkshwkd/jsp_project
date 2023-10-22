@@ -1,0 +1,42 @@
+body{
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size: cover;
+  
+}
+
+.d1{display:grid; grid-template-rows: 1fr 8fr 1fr; height:100%;}
+
+.i1{width: 12%; height: 7%; position: absolute; top:2.5%; left: 6%; border-radius: 10px;}
+.i2{position: absolute; top:13%; left: 30%; width: 500 ;height :300}
+.i3{position: absolute; top:15%; left: 78%;width: 300 ;height:150}
+.i4{position: absolute; top:37%; left: 78%;width: 300; height:150}
+.i5{position: absolute; top:59%; left: 78%;width: 300 ;height:150}
+.i6{position: absolute; top:81%; left: 78%;width: 300; height:150}
+
+.d2:nth-child(1){background: black;} 
+
+.d21{display:inline-block; color: white; margin-left: 23%; margin-top: 1.5%; font-size: 25; }
+.d22{display:inline-block; color: white; font-size: 25; margin-left: 5%; }
+.d23{display:inline-block; color: white; font-size: 25; margin-left: 5%; }
+.d24{display:inline-block; color: white; font-size: 17; position: absolute; top:4.5%; right:5%}
+.d25{display:inline-block; color: white; font-size: 17; position: absolute; top:4.5%; right:11%}
+
+.d21:hover a{color:rgb(238, 101, 10);}
+.d22:hover a{color:rgb(238, 101, 10);}
+.d23:hover a{color:rgb(238, 101, 10);}
+.d24:hover a{color:rgb(238, 101, 10);}
+.d25:hover a{color:rgb(238, 101, 10);}
+
+a{text-decoration: none;}
+a:link{color:white; }
+a:visited{color: white;}
+
+.span1{margin-top: 100; margin-left:15% ; color:white;font-size: 20;}
+.span2{font-size: 20;}
+.span2:nth-child(1){ margin-top: 100; margin-left:15%; color:white; width: 200;}
+.span2:nth-child(2){ margin-top: 100; margin-left:15% ; color:white; width: 200;}
+.span2:nth-child(3){ margin-top: 100; margin-left:15% ; color:white; width: 200;}
+.span1:hover a{color:rgb(238, 101, 10);}
+.span2:hover a{color:rgb(238, 101, 10);}
+

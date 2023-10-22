@@ -37,4 +37,7 @@ public class ServiceManager {
     public LoginService loginService() {
         return new LoginService(loginValidator(), memberDao());
     }
+
+
+
 }

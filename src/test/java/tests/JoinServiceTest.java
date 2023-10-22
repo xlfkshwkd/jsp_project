@@ -93,7 +93,16 @@ public class JoinServiceTest {
                  member.setAgree(false);
                  requiredFieldEachCheck(member, "약관");
 
-             }
+             } ,()->{
+            //폰번호 검증
+            Member member =getMember();
+            member.setPhoneNb(null);
+            requiredFieldEachCheck(member, "전화번호");
+
+            member.setPhoneNb(" ");
+            requiredFieldEachCheck(member, "전화번호");
+
+            }
 
      );
     }

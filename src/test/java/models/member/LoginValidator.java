@@ -22,6 +22,7 @@ public class LoginValidator implements Validator<HttpServletRequest>, RequiredVa
         requiredCheck(userId, new BadRequestException("아이디를 입력하세요."));
         requiredCheck(userPw, new BadRequestException("비밀번호를 입력하세요."));
 
+
         // 가입된 회원인지 검사
         requiredTrue(memberDao.exists(userId), new MemberNotFoundException());
     }

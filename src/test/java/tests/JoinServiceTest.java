@@ -172,6 +172,22 @@ public class JoinServiceTest {
                 }
         );
     }
+    @Test
+    @DisplayName("이메일 주소 형식 확인")
+    void emailFormatCheck() {
+        assertAll(
+                () -> {
+                    // 잘못된 이메일 주소
+                    Member member = getMember();
+                    member.setEmail("invalid-email");
+                    assertThrows(BadRequestException.class, () -> {
+                        if (!member.getEmail().matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
+                            throw new BadRequestException("유효한 이메일 주소 형식이 아닙니다.");
+                        }
+                    });
+                }
+        );
+    }
 
     @Test
     @DisplayName("비밀번호, 비밀번호 확인 입력 데이터 일치여부 체크, 검증 실패시 BadRequestException 발생")

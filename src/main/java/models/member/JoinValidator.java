@@ -25,6 +25,7 @@ public class JoinValidator implements Validator<Member>, RequiredValidator, Leng
         requiredCheck(confirmUserPw, new BadRequestException("비밀번호를 확인하세요."));
         requiredCheck(member.getUserNm(), new BadRequestException("회원명을 입력하세요."));
         requiredCheck(member.getEmail(), new BadRequestException("이메일을 입력하세요."));
+
         requiredTrue(member.isAgree(), new BadRequestException("회원가입 약관에 동의하세요."));
         // 필수 항목 검증 E
 
@@ -35,8 +36,6 @@ public class JoinValidator implements Validator<Member>, RequiredValidator, Leng
 
         // 비밀번호, 비밀번호 확인 일치여부 체크
         requiredTrue(userPw.equals(confirmUserPw), new BadRequestException("비밀번호가 일치하지 않습니다."));
-
-
 
         // 중복 가입 여부 체크
         requiredTrue(!memberDao.exists(userId), new DuplicateMemberException());

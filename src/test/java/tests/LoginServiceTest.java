@@ -53,7 +53,7 @@ public class LoginServiceTest {
                 .agree(true)
                 .build();
     }
-    //가짜 데이터 생성
+
     private void createRequestData(String userId, String userPw) {
         given(request.getParameter("userId")).willReturn(userId);
         given(request.getParameter("userPw")).willReturn(userPw);
@@ -108,10 +108,4 @@ public class LoginServiceTest {
             loginService.login(request);
         });
     }
-
-
-
-
-
-
 }

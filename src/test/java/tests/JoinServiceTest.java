@@ -122,7 +122,6 @@ public class JoinServiceTest {
                     member.setAgree(false);
                     fieldEachCheck(member, "약관");
                 }
-
         );
 
     }
@@ -152,9 +151,22 @@ public class JoinServiceTest {
                     member.setUserPw("1234");
                     fieldEachCheck(member, "비밀번호는 8자리");
                 }
-
         );
     }
+
+    @Test
+    @DisplayName("비밀번호, 비밀번호 확인 입력 데이터 일치여부 체크, 검증 실패시 BadRequestException 발생")
+    void passwordConfirmCheck() {
+        BadRequestException thrown = assertThrows(BadRequestException.class, () -> {
+            Member member = getMember();
+            member.setConfirmUserPw(member.getUserPw() + "**");
+            joinService.join(member);
+        });
+
+        assertTrue(thrown.getMessage().contains("비밀번호가 일치"));
+    }
+
+
 
     @Test
     @DisplayName("아이디 영어로만 구성 여부 검사")
@@ -189,17 +201,8 @@ public class JoinServiceTest {
         );
     }
 
-    @Test
-    @DisplayName("비밀번호, 비밀번호 확인 입력 데이터 일치여부 체크, 검증 실패시 BadRequestException 발생")
-    void passwordConfirmCheck() {
-        BadRequestException thrown = assertThrows(BadRequestException.class, () -> {
-            Member member = getMember();
-            member.setConfirmUserPw(member.getUserPw() + "**");
-            joinService.join(member);
-        });
 
-        assertTrue(thrown.getMessage().contains("비밀번호가 일치"));
-    }
+
 
     @Test
     @DisplayName("중복 가입 체크, 중복 가입인 경우 DuplicateMemberException 발생")
@@ -213,9 +216,4 @@ public class JoinServiceTest {
             joinService.join(member);
         });
     }
-
-
-
-
-
 }

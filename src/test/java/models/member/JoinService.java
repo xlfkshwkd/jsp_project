@@ -32,7 +32,6 @@ public class JoinService {
                 .confirmUserPw(request.getParameter("confirmUserPw"))
                 .email(request.getParameter("email"))
                 .userNm(request.getParameter("userNm"))
-                .phoneNb(request.getParameter("phoneNb"))
                 .agree(agree)
                 .build();
         join(member);

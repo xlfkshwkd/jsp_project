@@ -10,6 +10,5 @@ public class Member {
     private String confirmUserPw;
     private String userNm;
     private String email;
-    private String phoneNb;
     private boolean agree; // 약관 동의
 }

@@ -26,6 +26,7 @@ public class JoinServiceTest {
                 .confirmUserPw(userPw)
                 .userNm("사용자")
                 .email("user@test.org")
+                .phoneNb("010-3087-9808")
                 .agree(true)
                 .build();
     }

@@ -15,8 +15,8 @@
             <div class=d22><a href=#>캐릭터</a></div>
             <div class=d23><a href=#>공략/루트</a></div>
             <div class=d23><a href="black4.html" target="_self">게임소개</a></div>
-            <div class=d24><a href="black2.html" target="_self">로그인</a></div>
-            <div class=d25><a href="black3.html" target="_self">회원가입</a></div>
+            <div class=d24> ${userId}  로그인 완료</div>
+
             </div>
           <a href="black.html"><img class= i1 src="images/log.jpg" ></a>
         </div>

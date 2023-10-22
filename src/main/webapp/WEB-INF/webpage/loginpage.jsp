@@ -14,13 +14,17 @@
 <body style = "background-image:url(images/black1xnaud.jpg)">
     <a href="black.html"><img class= i1 src="images/log.jpg" ></a>
      <h1>ETERNAL--RETURN</h1>
-    <form method="get" action="#">
+    <form method="POST "action="${action}">
         <table>
             <tr>
-                <td><input type=text name=id placeholder="아이디"></td>
+                <td><input type= "text" name=id placeholder="아이디"
+                name="userId"
+                ></td>
             </tr>
             <tr>
-                <td><input type=password name=pw placeholder="비밀번호"></td>
+                <td><input type= "password" name=pw placeholder="비밀번호"
+                name="userPw"
+                ></td>
             </tr>
             <tr>
                 <th>
@@ -33,6 +37,7 @@
                     <span><a href="black3.html">회원가입</a></span>
                 </td>
                 </tr>
+
 		<tr><td class=td2>
             <span><img class ="logo2" src="images/login-2.png">
             </span></td> </table>

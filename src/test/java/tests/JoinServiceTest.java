@@ -152,6 +152,24 @@ public class JoinServiceTest {
                     member.setUserPw("1234");
                     fieldEachCheck(member, "비밀번호는 8자리");
                 }
+
+        );
+    }
+
+    @Test
+    @DisplayName("아이디 영어로만 구성 여부 검사")
+    void fieldEnglishCheck() {
+        assertAll(
+                () -> {
+                    // 아이디 영어로만 구성 확인
+                    Member member = getMember();
+                    member.setUserId("user1234");
+                    assertThrows(BadRequestException.class, () -> {
+                        if (!member.getUserId().matches("^[a-zA-Z]+$")) {
+                            throw new BadRequestException("아이디는 영어로만 구성되어야 합니다.");
+                        }
+                    });
+                }
         );
     }
 

@@ -161,7 +161,7 @@ public class JoinServiceTest {
     void fieldEnglishCheck() {
         assertAll(
                 () -> {
-                    // 아이디 영어로만 구성 확인
+                    //  영어로만 구성 확인
                     Member member = getMember();
                     member.setUserId("user1234");
                     assertThrows(BadRequestException.class, () -> {

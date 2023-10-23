@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layouts" %>
 <c:url var="action" value="/member/login" />
-
 <layout:main title="로그인">
     <h1>로그인</h1>
     <form method="post" action="${action}" target="ifrmProcess">

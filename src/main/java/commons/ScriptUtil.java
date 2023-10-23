@@ -1,6 +1,5 @@
 package commons;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
@@ -16,15 +15,14 @@ public class ScriptUtil {
         e.printStackTrace();
     }
 
-    public static void go(HttpServletResponse resp,String url,String target) throws IOException {
-        target = Objects.requireNonNullElse(target,"self");
-        resp.setContentType("text/html;charset=UTF-8");
-        PrintWriter out =resp.getWriter();
-        out.printf("<script>%s,location.replace('%s');</script>");
-
+    public static void go(HttpServletResponse resp, String url, String target) throws IOException {
+        target = Objects.requireNonNullElse(target, "self");
+        resp.setContentType("text/html; charset=UTF-8");
+        PrintWriter out = resp.getWriter();
+        out.printf("<script>%s.location.replace('%s');</script>", target, url);
     }
-    public static void go(HttpServletResponse resp,String url) throws IOException {
-        go(resp,url,null);
 
+    public static void go(HttpServletResponse resp, String url) throws IOException {
+        go(resp, url, null);
     }
 }

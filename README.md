@@ -27,7 +27,19 @@
     - 비밀번호, 비밀번호 확인 입력 데이터 일치여부 체크
     - 회원 정보를 저장
 
+로그인 
+  컨트롤러 member/login 
+  controller/member/loginController.java
+  get/
+  post
+  View
 
+- 메인페이지 
+  - 로그인한 경우 사용자명과 아이디님 로그인 메시지 출력 
+  - 로그아웃(/member/logout) ,마이페이지(/mypage) 링크 
+  - 미로그인 상태 
+  - 회원가입(/member/join),로그인(member/login) 링크 
+  - 
 
 
 

@@ -39,6 +39,9 @@
   - 로그아웃(/member/logout) ,마이페이지(/mypage) 링크 
   - 미로그인 상태 
   - 회원가입(/member/join),로그인(member/login) 링크 
+  - 로그 아웃 구현 
+  - controllers/member/logoutController.java
+  - GET ,POST 메서드 상관없이 기능 할수 있도록 처리 
   - 
 
 

@@ -14,8 +14,7 @@
         <table>
             <tr>
                 <td><input type= "text" name=id placeholder="아이디"
-                name="userId"
-                ></td>
+                name="userId"></td>
             </tr>
             <tr>
                 <td><input type= "password" name=pw placeholder="비밀번호"

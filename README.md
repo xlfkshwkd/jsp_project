@@ -45,7 +45,8 @@
 
 
 ## 완성 화면
-![메인페이지]()
+  ![메인페이지](https://raw.githubusercontent.com/xlfkshwkd/jsp_project/Descrption/images/join.JPG)
+
 ### 회원가입 
   ![메인페이지](주소)
 ### 로그인 

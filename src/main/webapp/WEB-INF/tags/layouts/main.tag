@@ -7,7 +7,7 @@
     <jsp:attribute name="footer">
     </jsp:attribute>
     <jsp:body>
-     <a href="black.html"><img class= i1 src="images/log.jpg" ></a>
+     <a href="index.jsp"><img class= i1 src="images/log.jpg" ></a>
         <jsp:doBody />
     </jsp:body>
 </layout:common>

@@ -10,8 +10,8 @@
 
 <layout:main title="이터널리턴..">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src ="js/main.js" alt="베너 사진"></script>
+    <link rel="stylesheet" type="text/css" href="templates/member/css/style.css">
+    <script src ="templates/member/js/main.js" alt="베너 사진"></script>
 </head>
 <body style = "background-image:url(images/black1xnaud.jpg)">
     <div class=d1>

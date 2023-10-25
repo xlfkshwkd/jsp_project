@@ -42,6 +42,16 @@
     -get 회원가입 양식  
     -post 회원가입 처리 
     -View :/WEB_INF/Templates/join.jsp
+## 완성화면 
+
+## 회원가입
+![회원가입](https://raw.githubusercontent.com/xlfkshwkd/jsp_project/CSs/images/join.png)
+## 로그인 
+![회원가입](https://raw.githubusercontent.com/xlfkshwkd/jsp_project/CSs/images/login.png)
+
+## 메인페이지
+![회원가입](https://raw.githubusercontent.com/xlfkshwkd/jsp_project/CSs/images/main.png)
+
 
 
 
